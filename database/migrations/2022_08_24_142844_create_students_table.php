@@ -15,11 +15,10 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('First name');
-            $table->string('last name');
-            $table->logo();
+            $table->string('Firstname');
+            $table->string('lastname');
             $table->timestamps();
-            $table->string('pseudo password');
+            $table->string('pseudopassword');
         });
     }
 

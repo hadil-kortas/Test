@@ -31,9 +31,12 @@ class ClassroomsController extends Controller
     }
 
 
-    public function show(Classroom $classroom){
+    public function show( Request $request, $id) {
 
-        $countStudent =  $classroom->students()->count();
+        $classroom = Classroom::find ($id);
+
+        return response()->json($classroom,201);
+
     }
 
 
